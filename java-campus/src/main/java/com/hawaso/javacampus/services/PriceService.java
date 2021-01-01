@@ -34,4 +34,18 @@ public class PriceService {
         //prices.add(4, new Price(4, "test", "test", new BigDecimal(1000)));
         prices.add(model); 
     }
+
+    public void updatePrice(int id, Price model) {
+        for (int i = 0; i < prices.size(); i++) {
+            Price price = prices.get(i);
+            if (price.getId() == id) {
+                prices.set(i, model); 
+                return;
+            }
+        }
+    }
+
+    public void deletePrice(int id) {
+        prices.removeIf(p -> p.getId() == id);
+    }
 }

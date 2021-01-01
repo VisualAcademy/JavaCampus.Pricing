@@ -44,7 +44,8 @@ public class Price {
         
     }
 
-    public Price(String name, String description, BigDecimal price) {
+    public Price(int id, String name, String description, BigDecimal price) {
+        this.id = id; 
         this.name = name;
         this.description = description;
         this.price = price;
